@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import AddressBook from './components/AddressBook.js/AddressBook';
+import { Toaster } from 'react-hot-toast';
+import GetAddressData from './components/GetAddressData/GetAddressData';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddressBook></AddressBook>
+      {/* <GetAddressData></GetAddressData> */}
+      <Toaster />
     </div>
   );
 }
