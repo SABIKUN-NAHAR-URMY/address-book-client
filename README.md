@@ -5,4 +5,4 @@
 # GitHub Client side Link: (https://github.com/SABIKUN-NAHAR-URMY/address-book-client)
 # GitHub Server Side Link: (https://github.com/SABIKUN-NAHAR-URMY/address-book-server)
 
-# Live Link: (https://address-book-99a43.firebaseapp.com)
+# Live Link: (https://address-book-99a43.web.app/)
