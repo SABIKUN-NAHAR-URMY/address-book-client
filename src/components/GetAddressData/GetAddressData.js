@@ -6,7 +6,7 @@ const GetAddressData = () => {
     const [getData, setGetData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/address')
+        fetch('https://address-book-server-eta.vercel.app/address')
             .then(res => res.json())
             .then(data => {
                 setGetData(data);

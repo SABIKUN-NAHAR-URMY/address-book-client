@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
             {
                 path:'/updateData/:id',
                 element: <UpdateData></UpdateData>,
-                loader:({params}) => fetch(`http://localhost:5000/address/${params.id}`)
+                loader:({params}) => fetch(`https://address-book-server-eta.vercel.app/address/${params.id}`)
             }
         ]
     }

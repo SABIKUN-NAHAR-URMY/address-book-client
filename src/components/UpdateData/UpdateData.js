@@ -9,7 +9,7 @@ const UpdateData = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/address/${id}`)
+        fetch(`https://address-book-server-eta.vercel.app/address/${id}`)
             .then(res => res.json())
             .then(data => setUpdated(data))
     }, [id]);
@@ -27,7 +27,7 @@ const UpdateData = () => {
             phone
         }
 
-        fetch(`http://localhost:5000/address/${id}`, {
+        fetch(`https://address-book-server-eta.vercel.app/address/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

@@ -20,7 +20,7 @@ const AddressBook = () => {
             phone: phone,
         }
 
-        fetch('http://localhost:5000/address', {
+        fetch('https://address-book-server-eta.vercel.app/address', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -40,7 +40,7 @@ const AddressBook = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/address`)
+        fetch(`https://address-book-server-eta.vercel.app/address`)
             .then(res => res.json())
             .then(data => {
                 setGetData(data);
@@ -52,7 +52,7 @@ const AddressBook = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete this review?');
         if (proceed) {
-            fetch(`http://localhost:5000/address/${id}`, {
+            fetch(`https://address-book-server-eta.vercel.app/address/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
