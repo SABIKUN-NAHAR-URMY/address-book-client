@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const TableData = ({data}) => {
+const TableData = ({data, handelDelete}) => {
     const navigate = useNavigate();
     const handelUpdate = id =>{
         navigate(`/updateData/${id}`);
@@ -11,7 +11,7 @@ const TableData = ({data}) => {
             <td>{data.name}</td>
             <td>{data.email}</td>
             <td>{data.phone}</td>
-            <td>Delete</td>
+            <td><button onClick={()=>handelDelete(data._id)}>Delete</button></td>
             <td><button onClick={()=>handelUpdate(data._id)}>Update</button></td>
         </div>
     );

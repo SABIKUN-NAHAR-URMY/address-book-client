@@ -19,7 +19,7 @@ const UpdateData = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const phone = form.rating.value;
+        const phone = form.phone.value;
 
         const formUpdate = {
             name,

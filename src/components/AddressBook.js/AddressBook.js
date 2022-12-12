@@ -46,6 +46,27 @@ const AddressBook = () => {
                 setGetData(data);
             })
     }, [addData]);
+
+
+
+    const handelDelete = id => {
+        const proceed = window.confirm('Are you sure you want to delete this review?');
+        if (proceed) {
+            fetch(`http://localhost:5000/address/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        toast.success("Deleted successfully!");
+                        const remaining = getData.filter(gd => gd._id !== id);
+                        setGetData(remaining);
+                    }
+                })
+        }
+    }
+
     return (
         <div>
             <div className='formDesign'>
@@ -64,7 +85,8 @@ const AddressBook = () => {
             {
                 getData.map(data =><TableData 
                 key={data._id}
-                data={data}></TableData>)
+                data={data}
+                handelDelete = {handelDelete}></TableData>)
 }
             </tr> <br />
             
